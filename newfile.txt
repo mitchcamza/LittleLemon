@@ -1,1 +1,2 @@
 Hello World
+New line of text
