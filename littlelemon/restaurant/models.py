@@ -18,5 +18,5 @@ class Booking(models.Model):
     bookingDate = models.DateTimeField()
 
     def __str__(self):
-        return self.title
+        return self.name
     
