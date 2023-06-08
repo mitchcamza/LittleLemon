@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index, MenuItemView, SingleMenuItemView
+from .views import index, MenuItemView, SingleMenuItemView, BookingViewSet
 
 urlpatterns = [
     path('', index, name='index'),
