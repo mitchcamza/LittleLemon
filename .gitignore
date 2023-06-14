@@ -1,0 +1,13 @@
+*.pyc
+littlelemon/littlelemon/__pycache__/settings.cpython-39.pyc
+littlelemon/littlelemon/__pycache__/urls.cpython-39.pyc
+littlelemon/restaurant/__pycache__/admin.cpython-39.pyc
+littlelemon/restaurant/__pycache__/models.cpython-39.pyc
+littlelemon/restaurant/__pycache__/serializers.cpython-39.pyc
+littlelemon/restaurant/__pycache__/urls.cpython-39.pyc
+littlelemon/restaurant/__pycache__/views.cpython-39.pyc
+littlelemon/restaurant/migrations/__pycache__/0001_initial.cpython-39.pyc
+littlelemon/restaurant/migrations/__pycache__/0002_alter_booking_id_alter_booking_no_of_guests_and_more.cpython-39.pyc
+littlelemon/restaurant/migrations/__pycache__/0003_alter_menu_id_alter_menu_inventory.cpython-39.pyc
+littlelemon/tests/__pycache__/test_models.cpython-39.pyc
+littlelemon/tests/__pycache__/test_views.cpython-39.pyc
