@@ -17,6 +17,11 @@ To use this application, follow these steps:
 4. Run the application using the Django development server.
 5. Test the application using the Insomnia REST client or other tools.
 
+## Establishing a MySQL connection
+Note: the 'django.db.backends.mysql' engine does not work on ARM based machines. 
+Please install mysql-connector-python using pip or pipenv.
+Alternatively, if you are using the mysqlclient connector, you can uncomment the 'django.db.backends.mysql' line in **settings.py** and comment out the line below it, in order to establish a database connection.
+
 ## Credentials
 | Username | Password       | User Type     |
 |----------|----------------|---------------|
