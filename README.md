@@ -17,6 +17,12 @@ To use this application, follow these steps:
 4. Run the application using the Django development server.
 5. Test the application using the Insomnia REST client or other tools.
 
+## Credentials
+| Username | Password       | User Type     |
+|----------|----------------|---------------|
+| meta     | password       | superuser     |
+| mario    | mariospassword | standard user |
+
 ## Testing
 The application contains unit tests that can be run using the Django test runner. To run the tests, use the following command: ```python manage.py test```
 The API can also be tested using the Insomnia REST client or other tools.
