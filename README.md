@@ -9,6 +9,13 @@
 - Contains unit tests
 - The API can be tested with the Insomnia REST client
 
+![alt text](<Screenshot 2024-09-13 at 11.32.32.png>)
+![alt text](<Screenshot 2024-09-13 at 11.03.14.png>)
+![alt text](<Screenshot 2024-09-13 at 11.03.57.png>)
+![alt text](<Screenshot 2024-09-13 at 11.32.44.png>)
+![alt text](<Screenshot 2024-09-13 at 11.33.10.png>)
+![alt text](<Screenshot 2024-09-13 at 11.33.57.png>)
+
 ## Getting the Code
 1. Clone the Repository from GitHub 
     ```bash 
