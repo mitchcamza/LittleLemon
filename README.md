@@ -11,11 +11,36 @@
 
 ## Installation and Usage
 To use this application, follow these steps:
-1. Clone the repository from GitHub
-2. Install the required dependencies.
-3. Set up a MySQL database and configure the application to use it
-4. Run the application using the Django development server.
-5. Test the application using the Insomnia REST client or other tools.
+1. Clone the Repository from GitHub 
+    ```bash 
+    git clone https://github.com/Meta-Backend-Developer/08-LittleLemon.git
+    ```
+
+2. Activate the Existing Virtual Environment:
+    ```bash 
+    python -m venv lemon
+    source lemon/bin/activate  # (On Windows use `env\Scripts\activate`)
+    ```
+
+3. Install Dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. Database Setup
+The MySQL database is already configured in the settings.py file. If you need to modify the connection details, you can find the relevant settings in the DATABASES section of settings.py.
+
+5. Apply Database Migrations:
+    ```bash
+    python3 manage.py migrate
+    ```
+
+6. Run the Development Server:
+    ```bash
+    python3 manage.py runserver
+    ```
+
+7. Test the application using the Insomnia REST client or other tools.
 
 ## Establishing a MySQL connection
 Note: the 'django.db.backends.mysql' engine does not work on ARM based machines. 
