@@ -79,7 +79,7 @@ WSGI_APPLICATION = "littlelemon.wsgi.application"
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.mysql', --does not work on M1 mac--
+        # 'ENGINE': 'django.db.backends.mysql', --does not work on ARM-based mac--
         'ENGINE': 'mysql.connector.django', 
         'NAME': 'LittleLemon',
         'USER': 'meta',

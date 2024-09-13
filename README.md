@@ -9,20 +9,57 @@
 - Contains unit tests
 - The API can be tested with the Insomnia REST client
 
+## Getting the Code
+1. Clone the Repository from GitHub 
+    ```bash 
+    git clone https://github.com/Meta-Backend-Developer/08-LittleLemon.git
+    ```
+
 ## Installation and Usage
-To use this application, follow these steps:
-1. Clone the repository from GitHub
-2. Install the required dependencies.
-3. Set up a MySQL database and configure the application to use it
-4. Run the application using the Django development server.
-5. Test the application using the Insomnia REST client or other tools.
+
+### Method 1 (Recommended for new users):
+
+1. Make the `setup.sh` script in the root directory executable:
+    ```bash 
+    chmod +x setup.sh 
+    ```
+2. Run the Script from the Root Directory:
+    ```bash
+    ./setup.sh
+    ```
+
+### Method 2: Follow the setup instructions below:
+
+1. Activate the Existing Virtual Environment:
+    ```bash 
+    python -m venv lemon
+    source lemon/bin/activate  # (On Windows use `env\Scripts\activate`)
+    ```
+
+2. Install Dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. Database Setup
+The MySQL database is already configured in the settings.py file. If you need to modify the connection details, you can find the relevant settings in the DATABASES section of settings.py.
+
+4. Apply Database Migrations:
+    ```bash
+    python3 manage.py migrate
+    ```
+
+5. Run the Development Server:
+    ```bash
+    python3 manage.py runserver
+    ```
 
 ## Establishing a MySQL connection
 Note: the 'django.db.backends.mysql' engine does not work on ARM based machines. 
 Please install mysql-connector-python using pip or pipenv.
 Alternatively, if you are using the mysqlclient connector, you can uncomment the 'django.db.backends.mysql' line in **settings.py** and comment out the line below it, in order to establish a database connection.
 
-## Credentials
+### Database Credentials
 | Username | Password       | User Type     |
 |----------|----------------|---------------|
 | meta     | password       | superuser     |
@@ -32,7 +69,7 @@ Alternatively, if you are using the mysqlclient connector, you can uncomment the
 The application contains unit tests that can be run using the Django test runner. To run the tests, use the following command: ```python manage.py test```
 The API can also be tested using the Insomnia REST client or other tools.
 
-## API endpoints to test
+### API endpoints to test
 | Description           | Method | Path                        | Token                                    | Form/JSON payload                                                         |
 |-----------------------|--------|-----------------------------|------------------------------------------|---------------------------------------------------------------------------|
 | Load static home page | GET    | /restaurant/                |                                          |                                                                           |
