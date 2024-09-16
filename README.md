@@ -9,12 +9,17 @@
 - Contains unit tests
 - The API can be tested with the Insomnia REST client
 
-![alt text](<Screenshot 2024-09-13 at 11.32.32.png>)
-![alt text](<Screenshot 2024-09-13 at 11.03.14.png>)
-![alt text](<Screenshot 2024-09-13 at 11.03.57.png>)
-![alt text](<Screenshot 2024-09-13 at 11.32.44.png>)
-![alt text](<Screenshot 2024-09-13 at 11.33.10.png>)
-![alt text](<Screenshot 2024-09-13 at 11.33.57.png>)
+![alt text](<Screenshot 2024-09-13 at 11.32.32-1.png>)
+![alt text](<Screenshot 2024-09-13 at 11.03.14-1.png>)
+![alt text](<Screenshot 2024-09-13 at 11.03.57-1.png>)
+![alt text](<Screenshot 2024-09-13 at 14.17.23.png>)
+![alt text](<Screenshot 2024-09-13 at 14.17.37.png>)
+![alt text](<Screenshot 2024-09-13 at 14.18.09.png>)
+![alt text](<Screenshot 2024-09-13 at 14.18.30.png>)
+![alt text](<Screenshot 2024-09-13 at 14.18.39.png>)
+![alt text](<Screenshot 2024-09-13 at 14.19.06.png>)
+![alt text](<Screenshot 2024-09-13 at 14.19.12.png>)
+![alt text](<Screenshot 2024-09-13 at 14.19.16.png>)
 
 ## Getting the Code
 1. Clone the Repository from GitHub 
