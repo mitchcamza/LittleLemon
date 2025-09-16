@@ -1,3 +1,4 @@
+# Pycache
 *.pyc
 littlelemon/littlelemon/__pycache__/settings.cpython-39.pyc
 littlelemon/littlelemon/__pycache__/urls.cpython-39.pyc
@@ -11,3 +12,6 @@ littlelemon/restaurant/migrations/__pycache__/0002_alter_booking_id_alter_bookin
 littlelemon/restaurant/migrations/__pycache__/0003_alter_menu_id_alter_menu_inventory.cpython-39.pyc
 littlelemon/tests/__pycache__/test_models.cpython-39.pyc
 littlelemon/tests/__pycache__/test_views.cpython-39.pyc
+
+# Virtual Environment
+/venv*
