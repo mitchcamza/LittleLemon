@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+  web:
+    build: .
+    restart: unless-stopped
+    command: python littlelemon/manage.py runserver 0.0.0.0:5000
+    volumes:
+      - .:/app
+    ports:
+      - "5000:5000"
