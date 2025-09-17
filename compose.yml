@@ -1,27 +1,10 @@
 version: '3.9'
 services:
-  # db:
-  #   image: postgres:15
-  #   environment:
-  #     POSTGRES_DB: littlelemon
-  #     POSTGRES_USER: lemonuser
-  #     POSTGRES_PASSWORD: lemonpass
-  #   volumes:
-  #     - db_data:/var/lib/postgresql/data
-  #   ports:
-  #     - "5432:5432"
-
   web:
     build: .
+    restart: unless-stopped
     command: python littlelemon/manage.py runserver 0.0.0.0:5000
     volumes:
       - .:/app
     ports:
       - "5000:5000"
-    # env_file:
-    #   - .env
-    # depends_on:
-    #   - db
-
-# volumes:
-#   db_data:
