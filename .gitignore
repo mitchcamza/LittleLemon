@@ -8,5 +8,11 @@
 # Secrets
 *.env
 
+# SSL
+*.key
+*.pem
+*.crt
+*.csr
+
 # Packages
 lemon/lib*
