@@ -1,35 +1,22 @@
 # LittleLemon Restaurant
-(Meta Back-End Developer Capstone Project)
+Started as my Meta BackEnd Developer Capstone Project - now expanded with containerization.
 
 ## This is a Django web application for a restaurant named LittleLemon. The application fulfills the following criteria:
 - Serves static HTML content using the Django framework
-- Connects the backend to a MySQL database
+- Connects the backend to a database
 - Implements APIs for menu and table booking
-- Set up with user registration and authentication
+- Provides user registration and authentication
 - Contains unit tests
-- The API can be tested with the Insomnia REST client
 
-![alt text](</images/Screenshot 2024-09-13 at 11.32.32-1.png>)
-![alt text](</images/Screenshot 2024-09-13 at 11.03.14-1.png>)
-![alt text](</images/Screenshot 2024-09-13 at 11.03.57-1.png>)
-![alt text](</images/Screenshot 2024-09-13 at 14.17.23.png>)
-![alt text](</images/Screenshot 2024-09-13 at 14.17.37.png>)
-![alt text](</images/Screenshot 2024-09-13 at 14.18.09.png>)
-![alt text](</images/Screenshot 2024-09-13 at 14.18.30.png>)
-![alt text](</images/Screenshot 2024-09-13 at 14.18.39.png>)
-![alt text](</images/Screenshot 2024-09-13 at 14.19.06.png>)
-![alt text](</images/Screenshot 2024-09-13 at 14.19.12.png>)
-![alt text](</images/Screenshot 2024-09-13 at 14.19.16.png>)
-
-## Getting the Code
-1. Clone the Repository from GitHub 
+## Cloning this Repo
+1. Clone the Repository
     ```bash 
-    git clone https://github.com/Meta-Backend-Developer/08-LittleLemon.git
+    git clone https://github.com/mitchcamza/LittleLemon.git
     ```
 
 ## Installation and Usage
 
-### Method 1 (Recommended for new users):
+### Method 1: Use the setup script
 
 1. Make the `setup.sh` script in the root directory executable:
     ```bash 
@@ -66,16 +53,31 @@ The MySQL database is already configured in the settings.py file. If you need to
     python3 manage.py runserver
     ```
 
-## Establishing a MySQL connection
-Note: the 'django.db.backends.mysql' engine does not work on ARM based machines. 
-Please install mysql-connector-python using pip or pipenv.
-Alternatively, if you are using the mysqlclient connector, you can uncomment the 'django.db.backends.mysql' line in **settings.py** and comment out the line below it, in order to establish a database connection.
+### Method 3: Run with Docker Compose
 
-### Database Credentials
-| Username | Password       | User Type     |
-|----------|----------------|---------------|
-| meta     | password       | superuser     |
-| mario    | mariospassword | standard user |
+1. Ensure you have [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) installed.
+
+2. Build and start the containers:
+    ```bash
+    docker-compose up --build
+    ```
+
+3. The Django application will be available at [http://localhost:8000](http://localhost:8000).
+
+4. To run migrations inside the container:
+    ```bash
+    docker-compose exec web python manage.py migrate
+    ```
+
+5. To create a superuser:
+    ```bash
+    docker-compose exec web python manage.py createsuperuser
+    ```
+
+6. To stop the containers:
+    ```bash
+    docker-compose down
+    ```
 
 ## Testing
 The application contains unit tests that can be run using the Django test runner. To run the tests, use the following command: ```python manage.py test```
@@ -92,3 +94,6 @@ The API can also be tested using the Insomnia REST client or other tools.
 | Delete a menu item    | DELETE | /restaurant/menu/<<int:pk>> | 2bb2d58fa95e3457d22c028663fbe1ad1e5ca40e |                                                                           |
 | Obtain authtoken      | POST   | /restaurant/api-token-auth/ |                                          | { 	"username": "mario",	"password": "mariospassword"}                       |
 | View table bookings   | GET    | /restaurant/booking/tables  | 2bb2d58fa95e3457d22c028663fbe1ad1e5ca40e |                                                                           |
+
+![alt text](</images/Screenshot 2024-09-13 at 11.32.32-1.png>)
+![alt text](</images/Screenshot 2024-09-13 at 14.17.23.png>)
