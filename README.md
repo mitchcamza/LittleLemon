@@ -1,59 +1,14 @@
 # LittleLemon Restaurant
-Started as my Meta BackEnd Developer Capstone Project - now expanded with containerization.
+This project containerizes a Django Web application and uses Nginx to act as a reverse proxy to forward incoming requests to the web application. This showcases my ability to work with Python, Django and Docker and Nginx, as well as understand principles such as MVT architecture, serialization, dependency management and database connectivity.
 
-## This is a Django web application for a restaurant named LittleLemon. The application fulfills the following criteria:
+## LittleLemon is a Django web application for a restaurant named LittleLemon. The application fulfills the following criteria:
 - Serves static HTML content using the Django framework
 - Connects the backend to a database
 - Implements APIs for menu and table booking
 - Provides user registration and authentication
 - Contains unit tests
 
-## Cloning this Repo
-1. Clone the Repository
-    ```bash 
-    git clone https://github.com/mitchcamza/LittleLemon.git
-    ```
-
-## Installation and Usage
-
-### Method 1: Use the setup script
-
-1. Make the `setup.sh` script in the root directory executable:
-    ```bash 
-    chmod +x setup.sh 
-    ```
-2. Run the Script from the Root Directory:
-    ```bash
-    ./setup.sh
-    ```
-
-### Method 2: Follow the setup instructions below:
-
-1. Activate the Existing Virtual Environment:
-    ```bash 
-    python -m venv lemon
-    source lemon/bin/activate  # (On Windows use `env\Scripts\activate`)
-    ```
-
-2. Install Dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3. Database Setup
-The MySQL database is already configured in the settings.py file. If you need to modify the connection details, you can find the relevant settings in the DATABASES section of settings.py.
-
-4. Apply Database Migrations:
-    ```bash
-    python3 manage.py migrate
-    ```
-
-5. Run the Development Server:
-    ```bash
-    python3 manage.py runserver
-    ```
-
-### Method 3: Run with Docker Compose
+## Getting Started
 
 1. Ensure you have [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) installed.
 
@@ -67,21 +22,22 @@ The MySQL database is already configured in the settings.py file. If you need to
     docker compose up -d
     ```
 
-4. The Django application will be available at [http://localhost:8000](http://localhost:8000).
+4. The Django application will be available at [http://localhost/restaurant](http://localhost:restaurant)
+![Restaurant Page](</images/Screenshot 2024-09-13 at 11.32.32-1.png>)
 
-5. To run migrations inside the container:
+   The admin login page is accessible via [http://localhost/admin](http://localhost/admin)
+![Admin Page](</images/Screenshot 2024-09-13 at 11.03.14-1.png>)
+
+## Migrations and Users
+
+1. To run migrations inside the container:
     ```bash
-    docker compose exec web python manage.py migrate
+    docker compose exec littlelemon python littlelemon/manage.py migrate
     ```
 
-6. To create a superuser:
+2. To create a superuser:
     ```bash
-    docker compose exec web python manage.py createsuperuser
-    ```
-
-7. To stop the containers:
-    ```bash
-    docker compose down
+    docker compose exec littlelemon python littlelemon/manage.py createsuperuser
     ```
 
 ## Testing
@@ -100,5 +56,10 @@ The API can also be tested using the Insomnia REST client or other tools.
 | Obtain authtoken      | POST   | /restaurant/api-token-auth/ |                                          | { 	"username": "mario",	"password": "mariospassword"}                       |
 | View table bookings   | GET    | /restaurant/booking/tables  | 2bb2d58fa95e3457d22c028663fbe1ad1e5ca40e |                                                                           |
 
-![alt text](</images/Screenshot 2024-09-13 at 11.32.32-1.png>)
 ![alt text](</images/Screenshot 2024-09-13 at 14.17.23.png>)
+
+## Stopping and Removing the Containers
+To stop the containers:
+```bash
+docker compose down
+```
