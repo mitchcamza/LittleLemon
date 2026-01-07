@@ -57,26 +57,31 @@ The MySQL database is already configured in the settings.py file. If you need to
 
 1. Ensure you have [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) installed.
 
-2. Build and start the containers:
+2. Create the Docker network:
+   ```bash
+   docker network create littlelemon_net
+   ```
+
+3. Build and start the containers:
     ```bash
-    docker-compose up --build
+    docker compose up -d
     ```
 
-3. The Django application will be available at [http://localhost:8000](http://localhost:8000).
+4. The Django application will be available at [http://localhost:8000](http://localhost:8000).
 
-4. To run migrations inside the container:
+5. To run migrations inside the container:
     ```bash
-    docker-compose exec web python manage.py migrate
+    docker compose exec web python manage.py migrate
     ```
 
-5. To create a superuser:
+6. To create a superuser:
     ```bash
-    docker-compose exec web python manage.py createsuperuser
+    docker compose exec web python manage.py createsuperuser
     ```
 
-6. To stop the containers:
+7. To stop the containers:
     ```bash
-    docker-compose down
+    docker compose down
     ```
 
 ## Testing
