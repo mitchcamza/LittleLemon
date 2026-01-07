@@ -19,7 +19,7 @@ COPY . /app/
 # RUN python littlelemon/manage.py collectstatic --noinput
 
 # Expose port (Django default is 8000)
-EXPOSE 5000
+EXPOSE 8001
 
 # Run the application
-CMD ["python", "littlelemon/manage.py", "runserver", "0.0.0.0:5000"]
+CMD ["python", "littlelemon/manage.py", "runserver", "0.0.0.0:8001"]
