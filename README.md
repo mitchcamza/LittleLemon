@@ -156,6 +156,20 @@ The API can also be tested using tools like Insomnia, Postman, or cURL.
 
 ---
 
+## Stopping and Removing the Containers
+
+To stop the containers:
+```bash
+docker compose down
+```
+
+To remove all containers, networks, and volumes:
+```bash
+docker compose down -v
+```
+
+---
+
 ## 🚀 Future Enhancements
 
 This project has room for growth and additional features:
@@ -172,20 +186,8 @@ This project has room for growth and additional features:
 
 ## 📬 Contact
 
-**Mitchell Camara** - [LinkedIn](https://linkedin.com/in/yourprofile) | [Portfolio](https://yourportfolio.com)
+**Mitchell Campbell** - [LinkedIn](https://www.linkedin.com/in/mitch-campbell-93b18919b/) | [GitHub](https://github.com/mitchcamza)
 
 Feel free to reach out if you'd like to discuss this project or potential opportunities!
 
 ---
-
-## Stopping and Removing the Containers
-
-To stop the containers:
-```bash
-docker compose down
-```
-
-To remove all containers, networks, and volumes:
-```bash
-docker compose down -v
-```
