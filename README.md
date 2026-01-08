@@ -78,7 +78,7 @@ Before running this application, ensure you have the following installed:
 
 - **Docker Engine** 20.x or higher ([Installation Guide](https://docs.docker.com/get-docker/))
 - **Docker Compose** 2.x or higher ([Installation Guide](https://docs.docker.com/compose/install/))
-- **Python 3.8+** (optional, for local development without Docker)
+- **Python 3.12+** (optional, for local development without Docker)
 
 ---
 
