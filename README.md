@@ -186,7 +186,7 @@ This project has room for growth and additional features:
 
 ## 📬 Contact
 
-**Mitchell Campbell** - [LinkedIn](https://www.linkedin.com/in/mitch-campbell-93b18919b/) | [GitHub](https://github.com/mitchcamza)
+**Mitch Campbell** - [LinkedIn](https://www.linkedin.com/in/mitch-campbell-93b18919b/) | [GitHub](https://github.com/mitchcamza)
 
 Feel free to reach out if you'd like to discuss this project or potential opportunities!
 
