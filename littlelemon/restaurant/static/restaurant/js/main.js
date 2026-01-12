@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
             card.style.animationDelay = `${index * 0.1}s`;
             
             card.innerHTML = `
-                <img src="/static/restaurant/images/food-${(index % 6) + 1}.jpg" alt="${item.title}" class="card-image">
+                <img src="/static/restaurant/images/food-${(index % 6) + 1}.svg" alt="${item.title}" class="card-image">
                 <div class="card-content">
                     <h3 class="card-title">${item.title}</h3>
                     <div class="card-footer">
@@ -201,8 +201,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Add to date input default min date (today)
-    const dateInputs = document.querySelectorAll('input[type="date"]');
+    // Set min date/datetime for booking inputs (today)
+    const dateInputs = document.querySelectorAll('input[type="date"], input[type="datetime-local"]');
     dateInputs.forEach(input => {
         const today = new Date().toISOString().split('T')[0];
         input.setAttribute('min', today);

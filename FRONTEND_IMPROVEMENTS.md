@@ -55,7 +55,7 @@ Text Color:      #333333 (Dark Gray)
 - Responsive columns (1-3 depending on screen size)
 - Smooth fade-in animations on scroll
 
-###4. Bookings Page (`/restaurant/bookings-page/`)
+### 4. Bookings Page (`/restaurant/bookings-page/`)
 **Reservation Form:**
 - Clean, intuitive form design
 - Date/time picker with validation

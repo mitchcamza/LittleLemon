@@ -24,12 +24,7 @@ def bookings(request):
         booking_date = request.POST.get('bookingDate')
         
         if name and no_of_guests and booking_date:
-            # Get the next available ID
-            last_booking = Booking.objects.order_by('-id').first()
-            next_id = (last_booking.id + 1) if last_booking else 1
-            
             booking = Booking.objects.create(
-                id=next_id,
                 name=name,
                 no_of_guests=no_of_guests,
                 bookingDate=booking_date

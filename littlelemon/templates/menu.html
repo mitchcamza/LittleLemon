@@ -40,7 +40,8 @@
             <div class="cards-grid" id="menu-items" data-load-dynamic="true">
                 {% for item in menu_items %}
                 <div class="card">
-                    <img src="{% static 'restaurant/images/food-' %}{{ forloop.counter|divisibleby:6|yesno:'6,1,2,3,4,5' }}.svg" alt="{{ item.title }}" class="card-image">
+                    {% cycle 'food-1.svg' 'food-2.svg' 'food-3.svg' 'food-4.svg' 'food-5.svg' 'food-6.svg' as food_image silent %}
+                    <img src="{% static 'restaurant/images/' %}{{ food_image }}" alt="{{ item.title }}" class="card-image">
                     <div class="card-content">
                         <h3 class="card-title">{{ item.title }}</h3>
                         <div class="card-footer">
