@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="restgrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EDEFEE;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dde0df;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#restgrad)"/>
+  <rect x="100" y="100" width="300" height="400" rx="10" fill="#495E57" opacity="0.1"/>
+  <rect x="450" y="100" width="300" height="400" rx="10" fill="#495E57" opacity="0.1"/>
+  <rect x="800" y="100" width="300" height="400" rx="10" fill="#495E57" opacity="0.1"/>
+  <circle cx="250" cy="600" r="80" fill="#F4CE14" opacity="0.2"/>
+  <circle cx="600" cy="600" r="80" fill="#EE9972" opacity="0.2"/>
+  <circle cx="950" cy="600" r="80" fill="#F4CE14" opacity="0.2"/>
+  <text x="600" y="750" font-family="Arial, sans-serif" font-size="36" fill="#495E57" text-anchor="middle" opacity="0.3">Little Lemon Restaurant</text>
+</svg>

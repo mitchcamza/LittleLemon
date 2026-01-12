@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="herograd" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#495E57;stop-opacity:0.9" />
+      <stop offset="50%" style="stop-color:#3a4a44;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#2d3a34;stop-opacity:0.9" />
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#herograd)"/>
+  <circle cx="1600" cy="200" r="150" fill="#F4CE14" opacity="0.15"/>
+  <circle cx="300" cy="800" r="200" fill="#EE9972" opacity="0.1"/>
+  <circle cx="960" cy="540" r="300" fill="#F4CE14" opacity="0.05"/>
+  <rect x="100" y="900" width="1720" height="3" fill="#F4CE14" opacity="0.3"/>
+</svg>

@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateAPIView, DestroyAPIView
 from rest_framework.decorators import api_view
 from rest_framework.viewsets import ModelViewSet
@@ -9,6 +10,49 @@ from .serializers import MenuSerializer, BookingSerializer
 
 def index(request):
     return render(request, 'index.html', {})
+
+
+def menu(request):
+    menu_items = Menu.objects.all()
+    return render(request, 'menu.html', {'menu_items': menu_items})
+
+
+def bookings(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        no_of_guests = request.POST.get('no_of_guests')
+        booking_date = request.POST.get('bookingDate')
+        
+        if name and no_of_guests and booking_date:
+            # Get the next available ID
+            last_booking = Booking.objects.order_by('-id').first()
+            next_id = (last_booking.id + 1) if last_booking else 1
+            
+            booking = Booking.objects.create(
+                id=next_id,
+                name=name,
+                no_of_guests=no_of_guests,
+                bookingDate=booking_date
+            )
+            messages.success(request, f'Reservation confirmed for {name} on {booking_date}!')
+            return redirect('bookings')
+        else:
+            messages.error(request, 'Please fill in all required fields.')
+    
+    bookings = Booking.objects.all().order_by('-bookingDate')
+    return render(request, 'bookings.html', {'bookings': bookings})
+
+
+def delete_booking(request, booking_id):
+    if request.method == 'POST':
+        booking = get_object_or_404(Booking, id=booking_id)
+        booking.delete()
+        messages.success(request, 'Reservation cancelled successfully.')
+    return redirect('bookings')
+
+
+def about(request):
+    return render(request, 'about.html', {})
 
 
 class MenuItemView(ListCreateAPIView):
