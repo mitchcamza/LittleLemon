@@ -118,6 +118,7 @@ nav.scrolled {
     text-align: center;
     position: relative;
     overflow: hidden;
+    z-index: 100;
 }
 
 .hero::before {
@@ -136,7 +137,7 @@ nav.scrolled {
     max-width: 800px;
     margin: 0 auto;
     position: relative;
-    z-index: 1;
+    z-index: 10;
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 1s ease forwards;
@@ -189,6 +190,8 @@ nav.scrolled {
 /* Section Styles */
 .section {
     padding: 4rem 0;
+    position: relative;
+    z-index: 1;
 }
 
 .section-title {
@@ -277,6 +280,8 @@ nav.scrolled {
 .features {
     background-color: var(--light-bg);
     padding: 4rem 2rem;
+    position: relative;
+    z-index: 1;
 }
 
 .features-grid {
