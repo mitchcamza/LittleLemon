@@ -97,6 +97,39 @@ Before running this application, ensure you have the following installed:
     ```
 
 4. The Django application will be available at [http://localhost/restaurant](http://localhost:restaurant)
+
+## 🎨 Frontend Pages
+
+The website now features a modern, responsive design with the following pages:
+
+### Home Page (`/restaurant/`)
+Modern landing page with hero section, features showcase, and featured dishes preview.
+
+### Menu Page (`/restaurant/menu-page/`)
+Browse all menu items in an attractive card-based grid layout with images, prices, and availability.
+
+### Bookings Page (`/restaurant/bookings-page/`)
+Make table reservations with an intuitive form, view your bookings, and cancel if needed.
+
+### About Page (`/restaurant/about/`)
+Learn about Little Lemon's story, philosophy, and values.
+
+### Admin Page (`/admin/`)
+Django admin interface for managing menu items and bookings.
+
+**Design Features:**
+- ✨ Modern minimalistic design
+- 📱 Fully responsive (mobile, tablet, desktop)
+- 🎯 Intuitive navigation with sticky header
+- 🎨 Professional color scheme (green, yellow, coral)
+- ⚡ Smooth scroll animations
+- 🖼️ Stock imagery and visual appeal
+
+For detailed information about the frontend redesign, see:
+- [`FRONTEND_IMPROVEMENTS.md`](FRONTEND_IMPROVEMENTS.md) - Technical documentation
+- [`VISUAL_GUIDE.md`](VISUAL_GUIDE.md) - Visual design guide
+- [`IMPLEMENTATION_SUMMARY.md`](IMPLEMENTATION_SUMMARY.md) - Complete overview
+
 ![Restaurant Page](</images/Screenshot 2024-09-13 at 11.32.32-1.png>)
 
    The admin login page is accessible via [http://localhost/admin](http://localhost/admin)
