@@ -152,7 +152,7 @@ The website features a modern, professional design system built with responsive 
 
 ### Pages
 
-#### Home Page (`/restaurant/`)
+#### Home Page (``)
 **Hero Section:**
 - Full-width gradient background with compelling headline
 - Primary call-to-action button
@@ -171,7 +171,7 @@ The website features a modern, professional design system built with responsive 
 - Price display and descriptions
 ![Featured Dishes Page](</images/featured.png>)
 
-#### Menu Page (`/restaurant/menu-page/`)
+#### Menu Page (`/menu`)
 - Responsive grid layout (1-3 columns based on screen size)
 - Professional card design with imagery
 - Real-time availability indicators
@@ -179,7 +179,7 @@ The website features a modern, professional design system built with responsive 
 - Smooth scroll animations on page load
 ![Menu Page](</images/menu.png>)
 
-#### Bookings Page (`/restaurant/bookings-page/`)
+#### Bookings Page (`/bookings`)
 **Reservation Form:**
 - Date/time picker with validation
 - Guest count selector (1-10 guests)
@@ -194,7 +194,7 @@ The website features a modern, professional design system built with responsive 
 - Date/time formatting for readability
 - Empty state messaging
 
-#### About Page (`/restaurant/about/`)
+#### About Page (`/about`)
 - Compelling restaurant story section
 - Philosophy and commitment statements
 - Core values showcase with visual elements
@@ -202,7 +202,7 @@ The website features a modern, professional design system built with responsive 
 - Integrated call-to-action
 ![About Page](</images/about.png>)
 
-#### Admin Page (`/admin/`)
+#### Admin Page (`/admin`)
 Django admin interface for managing menu items and bookings.
 ![Admin Page](</images/admin-login.png>)
 ![Admin Page](</images/site-admin.png>)
