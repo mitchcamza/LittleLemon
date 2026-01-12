@@ -1,0 +1,166 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings - Little Lemon Restaurant</title>
+    <link rel="stylesheet" href="{% static 'restaurant/css/styles.css' %}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <a href="{% url 'index' %}" class="logo">
+                <img src="{% static 'restaurant/logo.png' %}" alt="Little Lemon Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'menu' %}">Menu</a></li>
+                <li><a href="{% url 'bookings' %}">Bookings</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="/admin">Admin</a></li>
+            </ul>
+            <button class="mobile-menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="padding: 4rem 2rem;">
+        <div class="hero-content">
+            <h1>Reserve Your Table</h1>
+            <p>Book your dining experience at Little Lemon</p>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="section">
+        <div class="container">
+            <div class="form-container">
+                <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 2rem;">Make a Reservation</h2>
+                
+                {% if messages %}
+                    {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                {% endif %}
+
+                <form method="POST" id="booking-form">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guests">Number of Guests</label>
+                        <select id="guests" name="no_of_guests" required>
+                            <option value="">Select number of guests</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                            <option value="6">6 Guests</option>
+                            <option value="7">7 Guests</option>
+                            <option value="8">8 Guests</option>
+                            <option value="9">9+ Guests</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">Date & Time</label>
+                        <input type="datetime-local" id="date" name="bookingDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comments">Special Requests (Optional)</label>
+                        <textarea id="comments" name="comments" rows="4" placeholder="Any dietary restrictions or special occasions?"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn" style="width: 100%;">Confirm Reservation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Bookings Section -->
+    {% if bookings %}
+    <section class="section" style="background-color: var(--light-bg);">
+        <div class="container">
+            <h2 class="section-title">My Reservations</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Number of Guests</th>
+                            <th>Date & Time</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for booking in bookings %}
+                        <tr>
+                            <td>{{ booking.name }}</td>
+                            <td>{{ booking.no_of_guests }}</td>
+                            <td>{{ booking.bookingDate|date:"F d, Y - g:i A" }}</td>
+                            <td>
+                                <form method="POST" action="{% url 'delete_booking' booking.id %}" style="display: inline;">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-danger btn-sm delete-booking">Cancel</button>
+                                </form>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Little Lemon</h3>
+                <p>Experience the finest Mediterranean cuisine with a modern twist.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'menu' %}">Menu</a></li>
+                    <li><a href="{% url 'bookings' %}">Bookings</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li>123 Lemon Street</li>
+                    <li>Chicago, IL 60601</li>
+                    <li>Phone: (555) 123-4567</li>
+                    <li>Email: info@littlelemon.com</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Hours</h3>
+                <ul>
+                    <li>Monday - Friday: 11am - 10pm</li>
+                    <li>Saturday: 10am - 11pm</li>
+                    <li>Sunday: 10am - 9pm</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Little Lemon Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'restaurant/js/main.js' %}"></script>
+</body>
+</html>

@@ -1,11 +1,158 @@
 {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Lemon Restaurant - Home</title>
+    <link rel="stylesheet" href="{% static 'restaurant/css/styles.css' %}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <a href="{% url 'index' %}" class="logo">
+                <img src="{% static 'restaurant/logo.png' %}" alt="Little Lemon Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'menu' %}">Menu</a></li>
+                <li><a href="{% url 'bookings' %}">Bookings</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="/admin">Admin</a></li>
+            </ul>
+            <button class="mobile-menu-toggle">☰</button>
+        </div>
+    </nav>
 
-<html>
-   <head>
-      <title>Capstone Project</title>
-   </head>
-   <body>
-      <h1 style="text-align:center;">Welcome To the Little Lemon Restaurant</h1>
-      <img src="{% static 'restaurant/logo.png' %}">
-   </body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Little Lemon</h1>
+            <p>Experience the finest Mediterranean cuisine with a modern twist</p>
+            <a href="{% url 'menu' %}" class="cta-button">Explore Our Menu</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Little Lemon?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🍋</div>
+                    <h3 class="feature-title">Fresh Ingredients</h3>
+                    <p class="feature-description">We source the freshest ingredients daily to ensure quality in every dish</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">👨‍🍳</div>
+                    <h3 class="feature-title">Expert Chefs</h3>
+                    <p class="feature-description">Our experienced chefs craft each meal with passion and precision</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🌟</div>
+                    <h3 class="feature-title">Premium Service</h3>
+                    <p class="feature-description">Enjoy exceptional service in a warm and welcoming atmosphere</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📅</div>
+                    <h3 class="feature-title">Easy Booking</h3>
+                    <p class="feature-description">Reserve your table online in just a few clicks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Dishes -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Dishes</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <img src="{% static 'restaurant/images/food-1.svg' %}" alt="Gourmet Salad" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Gourmet Salad</h3>
+                        <p class="card-description">Fresh mixed greens with our signature lemon vinaigrette</p>
+                        <div class="card-footer">
+                            <span class="card-price">$12.99</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="{% static 'restaurant/images/food-2.svg' %}" alt="Grilled Steak" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Grilled Steak</h3>
+                        <p class="card-description">Premium cut beef grilled to perfection</p>
+                        <div class="card-footer">
+                            <span class="card-price">$28.99</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="{% static 'restaurant/images/food-3.svg' %}" alt="Pasta Primavera" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Pasta Primavera</h3>
+                        <p class="card-description">Fresh pasta with seasonal vegetables</p>
+                        <div class="card-footer">
+                            <span class="card-price">$16.99</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="{% url 'menu' %}" class="btn">View Full Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section" style="background-color: var(--light-bg);">
+        <div class="container text-center">
+            <h2 class="section-title">Ready to Dine With Us?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #666;">Book your table now and experience exceptional Mediterranean cuisine</p>
+            <a href="{% url 'bookings' %}" class="cta-button">Reserve a Table</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Little Lemon</h3>
+                <p>Experience the finest Mediterranean cuisine with a modern twist.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'menu' %}">Menu</a></li>
+                    <li><a href="{% url 'bookings' %}">Bookings</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li>123 Lemon Street</li>
+                    <li>Chicago, IL 60601</li>
+                    <li>Phone: (555) 123-4567</li>
+                    <li>Email: info@littlelemon.com</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Hours</h3>
+                <ul>
+                    <li>Monday - Friday: 11am - 10pm</li>
+                    <li>Saturday: 10am - 11pm</li>
+                    <li>Sunday: 10am - 9pm</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Little Lemon Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'restaurant/js/main.js' %}"></script>
+</body>
 </html>

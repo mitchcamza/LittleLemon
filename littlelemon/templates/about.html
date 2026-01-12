@@ -1,0 +1,154 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Little Lemon Restaurant</title>
+    <link rel="stylesheet" href="{% static 'restaurant/css/styles.css' %}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <a href="{% url 'index' %}" class="logo">
+                <img src="{% static 'restaurant/logo.png' %}" alt="Little Lemon Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'menu' %}">Menu</a></li>
+                <li><a href="{% url 'bookings' %}">Bookings</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="/admin">Admin</a></li>
+            </ul>
+            <button class="mobile-menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="padding: 4rem 2rem;">
+        <div class="hero-content">
+            <h1>About Little Lemon</h1>
+            <p>Our story, our passion, our commitment to excellence</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="section">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1.5rem; font-size: 2rem;">Our Story</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: #666; margin-bottom: 2rem;">
+                    Little Lemon was founded with a simple vision: to bring the authentic flavors of Mediterranean cuisine 
+                    to the heart of Chicago. What started as a small family restaurant has grown into a beloved dining 
+                    destination, known for our commitment to fresh ingredients, traditional recipes, and warm hospitality.
+                </p>
+
+                <h2 style="color: var(--primary-color); margin-bottom: 1.5rem; font-size: 2rem;">Our Philosophy</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: #666; margin-bottom: 2rem;">
+                    We believe that great food starts with great ingredients. That's why we partner with local farmers 
+                    and suppliers to source the freshest produce, premium meats, and authentic Mediterranean ingredients. 
+                    Our chefs prepare each dish with care, honoring traditional cooking methods while adding our own 
+                    creative touches.
+                </p>
+
+                <h2 style="color: var(--primary-color); margin-bottom: 1.5rem; font-size: 2rem;">Our Commitment</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: #666; margin-bottom: 2rem;">
+                    At Little Lemon, we're committed to providing not just a meal, but an experience. From the moment 
+                    you walk through our doors, you'll be treated like family. Our team is dedicated to ensuring every 
+                    visit is memorable, whether you're celebrating a special occasion or simply enjoying a night out.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant Image -->
+    <section class="section" style="background-color: var(--light-bg);">
+        <div class="container">
+            <img src="{% static 'restaurant/images/restaurant-interior.svg' %}" alt="Restaurant Interior" 
+                 style="width: 100%; max-width: 1000px; margin: 0 auto; display: block; border-radius: 12px; box-shadow: var(--shadow-lg);">
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Our Values</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🌱</div>
+                    <h3 class="feature-title">Sustainability</h3>
+                    <p class="feature-description">We're committed to sustainable practices and supporting local producers</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">❤️</div>
+                    <h3 class="feature-title">Quality</h3>
+                    <p class="feature-description">We never compromise on quality, from ingredients to service</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">👥</div>
+                    <h3 class="feature-title">Community</h3>
+                    <p class="feature-description">We're proud to be part of the local community and give back regularly</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎨</div>
+                    <h3 class="feature-title">Innovation</h3>
+                    <p class="feature-description">We honor tradition while constantly exploring new flavors and techniques</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section" style="background-color: var(--light-bg);">
+        <div class="container text-center">
+            <h2 class="section-title">Visit Us Today</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #666;">
+                Experience the Little Lemon difference for yourself
+            </p>
+            <a href="{% url 'bookings' %}" class="cta-button">Make a Reservation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Little Lemon</h3>
+                <p>Experience the finest Mediterranean cuisine with a modern twist.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'menu' %}">Menu</a></li>
+                    <li><a href="{% url 'bookings' %}">Bookings</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li>123 Lemon Street</li>
+                    <li>Chicago, IL 60601</li>
+                    <li>Phone: (555) 123-4567</li>
+                    <li>Email: info@littlelemon.com</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Hours</h3>
+                <ul>
+                    <li>Monday - Friday: 11am - 10pm</li>
+                    <li>Saturday: 10am - 11pm</li>
+                    <li>Sunday: 10am - 9pm</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Little Lemon Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'restaurant/js/main.js' %}"></script>
+</body>
+</html>

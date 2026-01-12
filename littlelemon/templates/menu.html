@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Little Lemon Restaurant</title>
+    <link rel="stylesheet" href="{% static 'restaurant/css/styles.css' %}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <a href="{% url 'index' %}" class="logo">
+                <img src="{% static 'restaurant/logo.png' %}" alt="Little Lemon Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'menu' %}">Menu</a></li>
+                <li><a href="{% url 'bookings' %}">Bookings</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="/admin">Admin</a></li>
+            </ul>
+            <button class="mobile-menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="padding: 4rem 2rem;">
+        <div class="hero-content">
+            <h1>Our Menu</h1>
+            <p>Discover our exquisite selection of Mediterranean dishes</p>
+        </div>
+    </section>
+
+    <!-- Menu Items -->
+    <section class="section">
+        <div class="container">
+            <div class="cards-grid" id="menu-items" data-load-dynamic="true">
+                {% for item in menu_items %}
+                <div class="card">
+                    {% cycle 'food-1.svg' 'food-2.svg' 'food-3.svg' 'food-4.svg' 'food-5.svg' 'food-6.svg' as food_image silent %}
+                    <img src="{% static 'restaurant/images/' %}{{ food_image }}" alt="{{ item.title }}" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">{{ item.title }}</h3>
+                        <div class="card-footer">
+                            <span class="card-price">${{ item.price }}</span>
+                            <span style="color: #666; font-size: 0.9rem;">Available: {{ item.inventory }}</span>
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <div style="grid-column: 1 / -1; text-align: center; padding: 3rem;">
+                    <p style="font-size: 1.2rem; color: #666;">No menu items available at the moment.</p>
+                    <p style="margin-top: 1rem;"><a href="/admin" class="btn">Add Menu Items (Admin)</a></p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Little Lemon</h3>
+                <p>Experience the finest Mediterranean cuisine with a modern twist.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'menu' %}">Menu</a></li>
+                    <li><a href="{% url 'bookings' %}">Bookings</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li>123 Lemon Street</li>
+                    <li>Chicago, IL 60601</li>
+                    <li>Phone: (555) 123-4567</li>
+                    <li>Email: info@littlelemon.com</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Hours</h3>
+                <ul>
+                    <li>Monday - Friday: 11am - 10pm</li>
+                    <li>Saturday: 10am - 11pm</li>
+                    <li>Sunday: 10am - 9pm</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Little Lemon Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'restaurant/js/main.js' %}"></script>
+</body>
+</html>
