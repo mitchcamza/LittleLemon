@@ -20,7 +20,6 @@ A production-ready, containerized Django web application demonstrating modern fu
 - [🧪 Testing](#testing)
 - [🛑 Stopping and Removing the Containers](#stopping-and-removing-the-containers)
 - [📬 Contact](#contact)
-- [🚀 Installation and Running the Server Without Docker](#installation-and-running-the-server-without-docker)
 
 <a id="tech-stack"></a>
 ## 🛠️ Tech Stack
@@ -146,6 +145,33 @@ Before running this application, ensure you have the following installed:
     ```
 
 4. The Django application will be available at [http://localhost/restaurant](http://localhost:restaurant)
+
+<a id="installation-and-running-the-server-without-docker"></a>
+### Installation and Running the Server Without Docker
+
+To install the required packages and run the server without Docker, follow these steps:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/LittleLemon.git
+   cd LittleLemon
+   ```
+
+2. **Set up the virtual environment**:
+   ```bash
+   python3 -m venv lemon_env
+   source lemon_env/bin/activate
+   ```
+
+3. **Install the requirements**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run the server**:
+   ```bash
+   python ./littlelemon/manage.py runserver
+   ```
 
 <a id="frontend-design"></a>
 ## 🎨 Frontend Design
@@ -367,32 +393,5 @@ docker compose down -v
 ⭐ If you found this project helpful or interesting, please consider starring the repository!
 
 ---
-
-<a id="installation-and-running-the-server-without-docker"></a>
-## 🚀 Installation and Running the Server Without Docker
-
-To install the required packages and run the server without Docker, follow these steps:
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/yourusername/LittleLemon.git
-   cd LittleLemon
-   ```
-
-2. **Set up the virtual environment**:
-   ```bash
-   python3 -m venv lemon_env
-   source lemon_env/bin/activate
-   ```
-
-3. **Install the requirements**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Run the server**:
-   ```bash
-   python ./littlelemon/manage.py runserver
-   ```
 
 Now, you can access the application at `http://127.0.0.1:8000/`.
