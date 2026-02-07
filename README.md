@@ -1,4 +1,4 @@
-# 🍋 LittleLemon Restaurant
+# 🍋 Little Lemon Restaurant
 
 A production-ready, containerized Django web application demonstrating modern full-stack development practices with RESTful API design, reverse proxy architecture, and comprehensive testing.
 
@@ -8,6 +8,21 @@ A production-ready, containerized Django web application demonstrating modern fu
 [![Django REST Framework](https://img.shields.io/badge/DRF-3.15-ff1709?style=for-the-badge&logo=django&logoColor=white)](https://www.django-rest-framework.org/)
 [![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)](https://nginx.org/)
 
+## 📚 Table of Contents
+- [🛠️ Tech Stack](#tech-stack)
+- [✨ Key Features](#key-features)
+- [🏗️ Architecture](#architecture)
+- [💡 What I Learned](#what-i-learned)
+- [📋 Prerequisites](#prerequisites)
+- [🚀 Getting Started](#getting-started)
+- [🎨 Frontend Design](#frontend-design)
+- [🔧 Migrations and Users](#migrations-and-users)
+- [🧪 Testing](#testing)
+- [🛑 Stopping and Removing the Containers](#stopping-and-removing-the-containers)
+- [📬 Contact](#contact)
+- [🚀 Installation and Running the Server Without Docker](#installation-and-running-the-server-without-docker)
+
+<a id="tech-stack"></a>
 ## 🛠️ Tech Stack
 
 ### Backend
@@ -27,6 +42,7 @@ A production-ready, containerized Django web application demonstrating modern fu
 
 ---
 
+<a id="key-features"></a>
 ## ✨ Key Features
 
 ### Backend
@@ -49,6 +65,7 @@ A production-ready, containerized Django web application demonstrating modern fu
 
 ---
 
+<a id="architecture"></a>
 ## 🏗️ Architecture
 
 The application follows a modern three-tier architecture with reverse proxy:
@@ -77,6 +94,7 @@ The application follows a modern three-tier architecture with reverse proxy:
 
 ---
 
+<a id="what-i-learned"></a>
 ## 💡 What I Learned
 
 Through building this project, I gained hands-on experience with:
@@ -101,6 +119,7 @@ Through building this project, I gained hands-on experience with:
 
 ---
 
+<a id="prerequisites"></a>
 ## 📋 Prerequisites
 
 Before running this application, ensure you have the following installed:
@@ -111,6 +130,7 @@ Before running this application, ensure you have the following installed:
 
 ---
 
+<a id="getting-started"></a>
 ## Getting Started
 
 1. Ensure you have [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) installed.
@@ -127,6 +147,7 @@ Before running this application, ensure you have the following installed:
 
 4. The Django application will be available at [http://localhost/restaurant](http://localhost:restaurant)
 
+<a id="frontend-design"></a>
 ## 🎨 Frontend Design
 
 The website features a modern, professional design system built with responsive design principles and interactive animations.
@@ -231,6 +252,7 @@ Django admin interface for managing menu items and bookings.
 
 
 
+<a id="migrations-and-users"></a>
 ## Migrations and Users
 
 1. To run migrations inside the container:
@@ -245,6 +267,7 @@ Django admin interface for managing menu items and bookings.
 
 ---
 
+<a id="testing"></a>
 ## 🧪 Testing
 
 The application includes comprehensive testing coverage for both backend and frontend functionality.
@@ -316,6 +339,7 @@ The API can be tested using tools like Insomnia, Postman, or cURL.
 
 ---
 
+<a id="stopping-and-removing-the-containers"></a>
 ## Stopping and Removing the Containers
 
 To stop the containers:
@@ -333,6 +357,7 @@ docker compose down -v
 
 ---
 
+<a id="contact"></a>
 ## 📬 Contact
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-mitch--campbell--93b18919b-blue?logo=linkedin)](https://www.linkedin.com/in/mitch-campbell-93b18919b/)
@@ -342,3 +367,32 @@ docker compose down -v
 ⭐ If you found this project helpful or interesting, please consider starring the repository!
 
 ---
+
+<a id="installation-and-running-the-server-without-docker"></a>
+## 🚀 Installation and Running the Server Without Docker
+
+To install the required packages and run the server without Docker, follow these steps:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/LittleLemon.git
+   cd LittleLemon
+   ```
+
+2. **Set up the virtual environment**:
+   ```bash
+   python3 -m venv lemon_env
+   source lemon_env/bin/activate
+   ```
+
+3. **Install the requirements**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run the server**:
+   ```bash
+   python ./littlelemon/manage.py runserver
+   ```
+
+Now, you can access the application at `http://127.0.0.1:8000/`.
