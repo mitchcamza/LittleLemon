@@ -4,6 +4,7 @@
 
 # Virtual Environment
 /venv*
+lemon_env/
 
 # Secrets
 *.env
