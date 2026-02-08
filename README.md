@@ -2,8 +2,14 @@
 
 A production-ready, containerized Django web application demonstrating modern full-stack development practices with RESTful API design, reverse proxy architecture, and comprehensive testing.
 
-## 🚀 Live Demo
+## 🚀 Live Demo 
+[![Render Status](https://img.shields.io/website?style=for-the-badge&label=Render&logo=render&up_message=deployed&down_message=offline&url=https%3A%2F%2Flittlelemon-tnbw.onrender.com&color=46E3B7&logoColor=white)](https://littlelemon-tnbw.onrender.com)
+
 **Live Demo on Render: [https://littlelemon-tnbw.onrender.com](https://littlelemon-tnbw.onrender.com)**
+
+*`*`The live demo may require a minute to spin up a server.*
+
+---
 
 ## 📚 Table of Contents
 - [🛠️ Tech Stack](#tech-stack)
