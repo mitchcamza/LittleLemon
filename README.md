@@ -8,6 +8,9 @@ A production-ready, containerized Django web application demonstrating modern fu
 [![Django REST Framework](https://img.shields.io/badge/DRF-3.15-ff1709?style=for-the-badge&logo=django&logoColor=white)](https://www.django-rest-framework.org/)
 [![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)](https://nginx.org/)
 
+## 🚀 Live Demo
+**[View Live Project →](https://littlelemon-tnbw.onrender.com)**
+
 ## 📚 Table of Contents
 - [🛠️ Tech Stack](#tech-stack)
 - [✨ Key Features](#key-features)
