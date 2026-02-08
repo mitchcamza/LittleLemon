@@ -2,14 +2,8 @@
 
 A production-ready, containerized Django web application demonstrating modern full-stack development practices with RESTful API design, reverse proxy architecture, and comprehensive testing.
 
-[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
-[![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Django](https://img.shields.io/badge/Django-5.1-092E20?style=for-the-badge&logo=django&logoColor=white)](https://www.djangoproject.com/)
-[![Django REST Framework](https://img.shields.io/badge/DRF-3.15-ff1709?style=for-the-badge&logo=django&logoColor=white)](https://www.django-rest-framework.org/)
-[![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)](https://nginx.org/)
-
 ## 🚀 Live Demo
-**[View Live Project →](https://littlelemon-tnbw.onrender.com)**
+**Live Demo on Render: [https://littlelemon-tnbw.onrender.com](https://littlelemon-tnbw.onrender.com)**
 
 ## 📚 Table of Contents
 - [🛠️ Tech Stack](#tech-stack)
@@ -28,17 +22,25 @@ A production-ready, containerized Django web application demonstrating modern fu
 ## 🛠️ Tech Stack
 
 ### Backend
-- **Python 3.12** - Modern Python with type hints and async support
-- **Django 5.1** - High-level Python web framework
-- **Django REST Framework 3.15** - Powerful toolkit for building Web APIs
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)](https://www.djangoproject.com/)
+[![Django REST Framework](https://img.shields.io/badge/DRF-ff1709?style=for-the-badge&logo=django&logoColor=white)](https://www.django-rest-framework.org/)
+[![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://www.sqlite.org/)
+- **Python** - Modern Python with type hints and async support
+- **Django** - High-level Python web framework
+- **Django REST Framework** - Powerful toolkit for building Web APIs
 - **SQLite** - Lightweight database for development (PostgreSQL-ready)
 
 ### DevOps & Infrastructure
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)](https://nginx.org/)
 - **Docker & Docker Compose** - Containerization for consistent environments
 - **Nginx** - Reverse proxy for production-grade request handling
 - **Container Networking** - Isolated network architecture
 
 ### Testing & Quality
+[![Django Tests](https://img.shields.io/badge/Django_Tests-092E20?style=for-the-badge&logo=django&logoColor=white)](https://docs.djangoproject.com/en/stable/topics/testing/)
+[![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)](https://pytest.org/)
 - **Django Test Framework** - Comprehensive unit testing
 - **pytest** - Modern testing framework
 
