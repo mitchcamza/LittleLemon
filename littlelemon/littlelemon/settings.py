@@ -11,21 +11,29 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+from decouple import Config, RepositoryEnv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Load .env from project root (two levels up from settings.py)
+env_path = BASE_DIR.parent / '.env'
+env_config = Config(RepositoryEnv(env_path))
+
+if env_path.exists():
+    env_config = Config(RepositoryEnv(env_path))
+else:
+    env_config = None
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-w2*!7@c1fi4xp&p#2kl(tbdb++3zpgvb@xo3_z-0gj8ew9qbiw"
+SECRET_KEY = env_config('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ["*"]
+DEBUG = env_config('DEBUG', default=False, cast=bool)
+ALLOWED_HOSTS = env_config('ALLOWED_HOSTS', default='localhost,127.0.0.1').split(',')
 
 # Application definition
 
