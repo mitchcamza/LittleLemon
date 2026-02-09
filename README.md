@@ -21,6 +21,7 @@ A production-ready, containerized Django web application demonstrating modern fu
 - [🔧 Migrations and Users](#migrations-and-users)
 - [🧪 Testing](#testing)
 - [🛑 Stopping and Removing the Containers](#stopping-and-removing-the-containers)
+- [🚀 Future Enhancements](#future-enhancements)
 - [📬 Contact](#contact)
 
 <a id="tech-stack"></a>
@@ -395,6 +396,7 @@ docker compose down -v
 
 ---
 
+<a id="future-enhancements"></a>
 ## 🚀 Future Enhancements
 
 This project has room for growth and additional features:
