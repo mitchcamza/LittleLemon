@@ -9,7 +9,7 @@ ENV PYTHONUNBUFFERED 1
 WORKDIR /app
 
 # Copy requirements file and Install dependencies
-COPY littlelemon/requirements.txt /app/
+COPY requirements.txt /app/
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
 # Copy the rest of the project
@@ -19,7 +19,7 @@ COPY . /app/
 # RUN python littlelemon/manage.py collectstatic --noinput
 
 # Expose port (Django default is 8000)
-EXPOSE 8001
+EXPOSE 8000
 
 # Run the application
-CMD ["python", "littlelemon/manage.py", "runserver", "0.0.0.0:8001"]
+CMD ["python", "littlelemon/manage.py", "runserver", "0.0.0.0:8000"]
