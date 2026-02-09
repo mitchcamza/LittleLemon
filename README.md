@@ -155,7 +155,7 @@ Before running this application, ensure you have the following installed:
     docker compose up -d
     ```
 
-4. The Django application will be available at [http://localhost/restaurant](http://localhost:restaurant)
+4. The Django application will be available at [http://localhost](http://localhost)
 
 <a id="installation-and-running-the-server-without-docker"></a>
 ### Installation and Running the Server Without Docker
