@@ -18,6 +18,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Load .env from project root (two levels up from settings.py)
 env_path = BASE_DIR.parent / '.env'
+env_config = Config(RepositoryEnv(env_path))
+
 if env_path.exists():
     env_config = Config(RepositoryEnv(env_path))
 else:
