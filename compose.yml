@@ -1,4 +1,24 @@
 services:
+  db:
+    image: postgres:18.1-alpine
+    container_name: littlelemon-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - ${DB_PORT:-5432}:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql
+    networks:
+      - littlelemon_net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $DB_USER -d $DB_NAME"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      
   littlelemon:
     build: .
     command: python littlelemon/manage.py runserver 0.0.0.0:8000
@@ -8,6 +28,9 @@ services:
       - "${HOST_PORT:-8000}:8000"
     networks:
       - littlelemon_net
+    depends_on:
+      - db
+
 
   nginx:
     image: nginx:alpine
@@ -24,4 +47,7 @@ services:
 
 networks:
   littlelemon_net:
-    external: true
+
+volumes:
+  postgres_data:
+    name: littlelemon_postgres_data
