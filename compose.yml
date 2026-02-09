@@ -18,7 +18,7 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
-      
+
   littlelemon:
     build: .
     command: python littlelemon/manage.py runserver 0.0.0.0:8000
@@ -29,8 +29,8 @@ services:
     networks:
       - littlelemon_net
     depends_on:
-      - db
-
+      db:
+        condition: service_healthy
 
   nginx:
     image: nginx:alpine
