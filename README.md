@@ -150,12 +150,17 @@ Before running this application, ensure you have the following installed:
    docker network create littlelemon_net
    ```
 
-3. Build and start the containers:
+3. (Optional) To change any default configuration, create a .env file from .env.example and edit it:
+   ```bash
+   cp .env.example .env
+   ```
+
+4. Build and start the containers:
     ```bash
     docker compose up -d
     ```
 
-4. The Django application will be available at [http://localhost](http://localhost)
+5. The Django application will be available at [http://localhost](http://localhost)
 
 <a id="installation-and-running-the-server-without-docker"></a>
 ### Installation and Running the Server Without Docker
