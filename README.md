@@ -3,11 +3,10 @@
 A production-ready, containerized Django web application demonstrating modern full-stack development practices with RESTful API design, reverse proxy architecture, and comprehensive testing.
 
 ## 🚀 Live Demo 
-[![Render Status](https://img.shields.io/website?style=for-the-badge&label=Render&logo=render&up_message=deployed&down_message=offline&url=https%3A%2F%2Flittlelemon-tnbw.onrender.com&color=46E3B7&logoColor=white)](https://littlelemon-tnbw.onrender.com)
 
 **Live Demo on Render: [https://littlelemon-tnbw.onrender.com](https://littlelemon-tnbw.onrender.com)**
 
-*`*`The live demo may require a minute to spin up a server.*
+*Note: the live demo may require a minute to spin up a server.*
 
 ---
 
@@ -396,6 +395,30 @@ docker compose down -v
 
 ---
 
+## 🚀 Future Enhancements
+
+This project has room for growth and additional features:
+
+**Backend:**
+- [ ] **CI/CD Pipeline** - Implement automated testing and deployment with GitHub Actions
+- [ ] **Email Notifications** - Send confirmation emails for bookings and reservations
+- [ ] **Cloud Deployment** - Deploy to AWS/Azure with managed PostgreSQL database
+- [ ] **Monitoring & Logging** - Integrate ELK stack for observability
+- [ ] **Caching Layer** - Add Redis for improved performance
+- [ ] **API Documentation** - Generate interactive API docs with Swagger/OpenAPI
+
+**Frontend:**
+- [ ] **Real Photography** - Replace SVG placeholders with professional food photography
+- [ ] **Dark Mode** - Implement theme toggle with user preference storage
+- [ ] **Progressive Web App** - Add offline capabilities and installability
+- [ ] **Advanced Animations** - Implement more sophisticated scroll effects and micro-interactions
+- [ ] **Image Optimization** - Add lazy loading and responsive images with srcset
+- [ ] **Accessibility Enhancements** - WCAG 2.1 AA compliance and screen reader optimization
+- [ ] **Internationalization** - Multi-language support for global audience
+- [ ] **User Accounts** - Save favorite dishes, view booking history
+- [ ] **Advanced Booking** - Calendar view, real-time table availability
+- [ ] **Online Ordering** - Add shopping cart and checkout flow
+
 
 ---
 
@@ -409,5 +432,3 @@ docker compose down -v
 ⭐ If you found this project helpful or interesting, please consider starring the repository!
 
 ---
-
-Now, you can access the application at `http://127.0.0.1:8000/`.
