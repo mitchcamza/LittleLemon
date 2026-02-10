@@ -156,33 +156,6 @@ Before running this application, ensure you have the following installed:
 
 5. The Django application will be available at [http://localhost](http://localhost)
 
-<a id="installation-and-running-the-server-without-docker"></a>
-### Installation and Running the Server Without Docker
-
-To install the required packages and run the server without Docker, follow these steps:
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/yourusername/LittleLemon.git
-   cd LittleLemon
-   ```
-
-2. **Set up the virtual environment**:
-   ```bash
-   python3 -m venv lemon_env
-   source lemon_env/bin/activate
-   ```
-
-3. **Install the requirements**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Run the server**:
-   ```bash
-   python ./littlelemon/manage.py runserver
-   ```
-
 <a id="frontend-design"></a>
 ## 🎨 Frontend Design
 
