@@ -26,4 +26,4 @@ RUN chmod +x /app/entrypoint.sh
 EXPOSE 8000
 
 # Run the application
-CMD ["sh", "/app/entrypoint.sh"]
+ENTRYPOINT ["sh", "/app/entrypoint.sh"]
