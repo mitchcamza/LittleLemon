@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: littlelemon
+    env: docker
+    plan: free
+    autoDeploy: true
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        sync: false
+      - key: DJANGO_DEBUG
+        value: "False"
+      - key: DJANGO_ALLOWED_HOSTS
+        value: "littlelemon.onrender.com"
+      - key: DB_NAME
+        fromDatabase:
+          name: littlelemon-db
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          name: littlelemon-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: littlelemon-db
+          property: password
+      - key: DB_HOST
+        fromDatabase:
+          name: littlelemon-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: littlelemon-db
+          property: port
+
+databases:
+  - name: littlelemon-db
+    plan: free

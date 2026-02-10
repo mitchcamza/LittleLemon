@@ -15,6 +15,10 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 # Copy the rest of the project
 COPY . /app/
 
+# Copy entrypoint script
+COPY entrypoint.sh /app/entrypoint.sh
+RUN chmod +x /app/entrypoint.sh
+
 # Collect static files (optional, for production)
 # RUN python littlelemon/manage.py collectstatic --noinput
 
@@ -22,4 +26,4 @@ COPY . /app/
 EXPOSE 8000
 
 # Run the application
-CMD ["python", "littlelemon/manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["sh", "/app/entrypoint.sh"]
